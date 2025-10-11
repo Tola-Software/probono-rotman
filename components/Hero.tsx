@@ -139,7 +139,7 @@ export function Hero() {
               <motion.div style={{ y: useTransform(scrollY, [0, 300], [0, -50]) }} className="relative w-full h-full">
                 <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-secondary/20 rounded-3xl" />
                 <Image
-                  src="/images/stall-hero.webp"
+                  src="/images/choco-cheese.png"
                   alt="ROTMAN delicious street food"
                   fill
                   priority

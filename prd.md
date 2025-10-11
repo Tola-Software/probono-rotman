@@ -33,9 +33,9 @@ USP bullets:
 - Made-to-order, smoky & fresh
 - Halal ingredients
 - Ready in under 5 minutes
-  Hours: **Mon–Sun 6:00 PM – 12:30 AM**  
-  Location: **Jl. Sunset Road 88, Kuta** _(make editable)_  
-  WhatsApp: **+62 812-3456-7890**  
+  Hours: **Mon–Sun 16:00 – 23:00**  
+  Location: **Jl. Karang Sari No.4 Padangsambian kaja, Bali** _(make editable)_  
+  WhatsApp: **+62 813-3703-7980**  
   WhatsApp link (prefilled):  
   `https://wa.me/6281234567890?text=Hi%20ROTMAN!%20I%20want%20to%20order%3A%20%5Bitem%20names%5D%20%2D%20pickup%2Fdelivery%3F`
 

@@ -4,9 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { CategoryPills } from "@/components/CategoryPills";
 import { MenuGrid } from "@/components/MenuGrid";
-import { menuItems, type MenuItem, type Category } from "@/data/menu";
+import { menuData as menuItems, type MenuItem } from "@/data/menu";
 
 export default function MenuPage() {
+  type Category = MenuItem["category"];
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
   const [filteredItems, setFilteredItems] = useState<MenuItem[]>(menuItems);
 

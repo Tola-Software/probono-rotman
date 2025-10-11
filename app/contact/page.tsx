@@ -26,7 +26,7 @@ export default function ContactPage() {
   };
 
   const whatsappUrl =
-    "https://wa.me/6281234567890?text=Hi%20ROTMAN!%20I%20want%20to%20order%3A%20%5Bitem%20names%5D%20%2D%20pickup%2Fdelivery%3F";
+    "https://wa.me/6281337037980?text=Hi%20ROTMAN!%20I%20want%20to%20order%3A%20%5Bitem%20names%5D%20%2D%20pickup%2Fdelivery%3F";
 
   return (
     <div className="min-h-screen pt-20 pb-20 md:pb-8">
