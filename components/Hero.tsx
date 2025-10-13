@@ -40,7 +40,14 @@ export function Hero() {
                 transition={{ delay: 0.2 }}
                 className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium"
               >
-                🔥 Now Open in Kuta
+                {/* 🔥 Now Open in Kuta */}
+                <Image
+                  src="/images/rotman-logo.png"
+                  alt="rotman-logo"
+                  width={200}
+                  height={80}
+                  className="h-48 w-auto"
+                />
               </motion.div>
 
               <motion.h1
@@ -49,38 +56,16 @@ export function Hero() {
                 transition={{ delay: 0.3 }}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-tight"
               >
-                <span className="block">ROTMAN</span>
-                <span className="block text-accent">Street Food</span>
+                <span className="block text-accent">ROTI BAKAR & TERANG BULAN</span>
+                <span className="block">PALING NAGIH DI BALI!</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl md:text-2xl text-text-muted leading-relaxed"
-              >
-                Roti Bakar & Terang Bulan — Bold flavors, late nights.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="space-y-3 text-text-muted"
-              >
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-accent rounded-full"></span>
-                  <span>Made-to-order, smoky & fresh</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-accent rounded-full"></span>
-                  <span>Halal ingredients</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-accent rounded-full"></span>
-                  <span>Ready in under 5 minutes</span>
-                </div>
-              </motion.div>
+                className="text-xl md:text-2xl leading-relaxed text-accent"
+              ></motion.p>
             </div>
 
             {/* CTA Buttons */}
@@ -118,11 +103,11 @@ export function Hero() {
             >
               <div className="flex items-center space-x-2">
                 <span className="w-1 h-1 bg-accent rounded-full"></span>
-                <span>Mon-Sun 6PM-12:30AM</span>
+                <span>Mon-Sun 16:00-23:30</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="w-1 h-1 bg-accent rounded-full"></span>
-                <span>Jl. Sunset Road 88, Kuta</span>
+                <span>Jl. Karang Sari No.4 Padangsambian kaja, Bali</span>
               </div>
             </motion.div>
           </motion.div>
@@ -185,30 +170,60 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-4 -left-4 w-8 h-8 bg-secondary/40 rounded-full blur-sm"
               />
+
+              {/* Rotating dashed ring (top-right) */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="pointer-events-none absolute -top-6 -right-6 w-12 h-12"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 120 120" className="w-full h-full">
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="50"
+                    fill="none"
+                    stroke="var(--secondary,#c38f5f)"
+                    strokeWidth="10"
+                    strokeDasharray="12 14"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="60" cy="60" r="30" fill="var(--accent,#d46c31)" fillOpacity=".2" />
+                </svg>
+              </motion.div>
+
+              {/* Pulsing corner splash (bottom-left) */}
+              <motion.div
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="pointer-events-none absolute -bottom-4 -left-4 w-16 h-16 blur-[2px]"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 200 200" className="w-full h-full">
+                  <path
+                    d="M0,0 C60,0 120,30 160,80 C190,120 200,160 200,200 L0,200 Z"
+                    fill="var(--secondary,#c38f5f)"
+                    fillOpacity=".4"
+                  />
+                  <circle cx="160" cy="80" r="28" fill="var(--accent,#d46c31)" fillOpacity=".6" />
+                </svg>
+              </motion.div>
+
+              {/* Optional: subtle dotted overlay (covers container). 
+    If you reuse this component many times on a page, make the pattern id unique. */}
+              <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-10" aria-hidden="true">
+                <defs>
+                  <pattern id="dotsAccentPattern" width="8" height="8" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1.5" fill="var(--accent,#d46c31)" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotsAccentPattern)" />
+              </svg>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-accent/50 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-3 bg-accent rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

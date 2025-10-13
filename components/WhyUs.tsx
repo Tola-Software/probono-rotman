@@ -1,26 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Utensils, Shield, Zap } from "lucide-react";
+import { Clock, Utensils, Star, Flame } from "lucide-react";
 
 export function WhyUs() {
   const features = [
     {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Ready in under 5 minutes. Perfect for your busy lifestyle.",
+      icon: Flame,
+      title: "Panggang Sempurna",
+      description: "Roti bakar dengan tekstur renyah luar dan lembut dalam, panggang tepat di depan mata!",
       color: "text-yellow-400",
     },
     {
       icon: Utensils,
-      title: "Made Fresh",
-      description: "Every order prepared fresh with premium ingredients.",
+      title: "Harga Terbaik",
+      description: "Nikmati kualitas premium dengan harga yang super terjangkau dan worth it banget!",
       color: "text-green-400",
     },
     {
-      icon: Shield,
-      title: "100% Halal",
-      description: "Certified halal ingredients and cooking processes.",
+      icon: Star,
+      title: "Rasa Luarbiasa",
+      description: "Cita rasa autentik yang bikin ketagihan dan nagih terus!",
       color: "text-blue-400",
     },
   ];
@@ -34,10 +34,10 @@ export function WhyUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">Why Choose ROTMAN?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">Kenapa ROTMAN?</h2>
           <p className="text-lg text-text-muted max-w-2xl mx-auto">
-            We're not just another street food vendor. We're passionate about delivering authentic flavors with modern
-            standards.
+            Kami Roti Bakar Spesial! Kami berkomitmen menghadirkan cita rasa autentik dengan standar modern yang keren
+            banget!
           </p>
         </motion.div>
 

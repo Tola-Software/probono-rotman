@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 
@@ -51,7 +52,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-accent">ROTMAN</div>
+              <Image src="/images/rotman-logo.png" alt="rotman-logo" width={200} height={80} className="h-12 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
