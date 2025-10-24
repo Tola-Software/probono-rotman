@@ -8,21 +8,24 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ROTMAN - Roti Bakar & Terang Bulan | Bold flavors, late nights",
+  title: "ROTMAN - Roti Bakar & Terang Bulan | Paling Nagih di Bali",
   description:
-    "Street food vendor specializing in Roti Bakar and Terang Bulan. Made-to-order, smoky & fresh. Halal ingredients. Open Mon-Sun 6PM-12:30AM at Jl. Sunset Road 88, Kuta.",
-  keywords: "roti bakar, terang bulan, martabak manis, street food, kuta, bali, halal, late night food",
+    "Roti Bakar & Terang Bulan spesial dari ROTMAN. Dibuat fresh dengan resep tradisional, tekstur renyah luar lembut dalam. Buka setiap hari 16:00-23:30 di Jl. Karang Sari No.4 Padangsambian kaja, Denpasar, Bali.",
+  keywords: "roti bakar, terang bulan, martabak manis, makanan jalanan, denpasar, bali, halal, makanan malam",
+  icons: {
+    icon: "/images/rotman-logo.png",
+  },
   openGraph: {
-    title: "ROTMAN - Roti Bakar & Terang Bulan",
-    description: "Bold flavors, late nights. Made-to-order street food in Kuta.",
+    title: "ROTMAN - Roti Bakar & Terang Bulan | Paling Nagih di Bali",
+    description: "Roti Bakar & Terang Bulan dengan cita rasa autentik yang nagih dan lezat.",
     url: "https://rotman.id",
     siteName: "ROTMAN",
     images: [
       {
-        url: "/images/stall-hero.webp",
+        url: "/images/banner-rotman.jpeg",
         width: 1200,
         height: 630,
-        alt: "ROTMAN street food stall",
+        alt: "ROTMAN - Roti Bakar & Terang Bulan",
       },
     ],
     locale: "id_ID",
@@ -30,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ROTMAN - Roti Bakar & Terang Bulan",
-    description: "Bold flavors, late nights. Made-to-order street food in Kuta.",
-    images: ["/images/stall-hero.webp"],
+    title: "ROTMAN - Roti Bakar & Terang Bulan | Paling Nagih di Bali",
+    description: "Roti Bakar & Terang Bulan dengan cita rasa autentik yang nagih dan lezat.",
+    images: ["/images/banner-rotman.jpeg"],
   },
   robots: {
     index: true,
@@ -51,24 +54,31 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "ROTMAN",
-  description: "Street food vendor specializing in Roti Bakar and Terang Bulan",
+  description: "Roti Bakar & Terang Bulan spesial dari ROTMAN dengan cita rasa autentik yang nagih.",
   url: "https://rotman.id",
-  telephone: "+62 812-3456-7890",
+  telephone: "+62-813-3703-7980",
   servesCuisine: "Indonesian",
   hasMenu: true,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Jl. Sunset Road 88",
-    addressLocality: "Kuta",
+    streetAddress: "Jl. Karang Sari No.4 Padangsambian kaja",
+    addressLocality: "Denpasar",
     addressRegion: "Bali",
+    postalCode: "80114",
     addressCountry: "ID",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -8.6306967,
+    longitude: 115.1881169,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    opens: "18:00",
-    closes: "00:30",
+    opens: "16:00",
+    closes: "23:30",
   },
+  image: "/images/banner-rotman.jpeg",
   priceRange: "IDR 8,000 - IDR 95,000",
 };
 

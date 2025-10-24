@@ -155,7 +155,7 @@ export function Testimonials() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-accent" : "bg-surface-light hover:bg-accent/50"
+                  index === currentIndex ? "bg-accent" : "bg-secondary"
                 }`}
               />
             ))}

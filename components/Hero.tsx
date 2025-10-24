@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 export function Hero() {
@@ -11,6 +10,14 @@ export function Hero() {
 
   const whatsappUrl =
     "https://wa.me/6281234567890?text=Hi%20ROTMAN!%20I%20want%20to%20order%3A%20%5Bitem%20names%5D%20%2D%20pickup%2Fdelivery%3F";
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background to-background/80">
@@ -46,7 +53,7 @@ export function Hero() {
                   alt="rotman-logo"
                   width={200}
                   height={80}
-                  className="h-48 w-auto"
+                  className="h-60 w-auto"
                 />
               </motion.div>
 
@@ -85,13 +92,14 @@ export function Hero() {
                 <span>Order Now</span>
               </a>
 
-              <Link
-                href="/menu"
-                className="inline-flex items-center justify-center space-x-3 bg-surface hover:bg-surface-light border border-surface-light text-text-primary px-8 py-4 rounded-xl transition-all duration-300 font-bold text-lg hover:scale-105"
+              <a
+                href="#menu"
+                onClick={(e) => handleSmoothScroll(e, "#menu")}
+                className="inline-flex items-center justify-center space-x-3 bg-surface hover:bg-surface-light border border-surface-light text-text-primary px-8 py-4 rounded-xl transition-all duration-300 font-bold text-lg hover:scale-105 cursor-pointer"
               >
                 <span>View Menu</span>
                 <ArrowRight size={20} />
-              </Link>
+              </a>
             </motion.div>
 
             {/* Quick Info */}
@@ -119,16 +127,16 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative w-full h-96 lg:h-[500px]">
+            <div className="relative w-full h-96 lg:h-[800px]">
               {/* Main food image */}
               <motion.div style={{ y: useTransform(scrollY, [0, 300], [0, -50]) }} className="relative w-full h-full">
                 <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-secondary/20 rounded-3xl" />
                 <Image
-                  src="/images/choco-cheese.png"
+                  src="/images/banner-rotman.jpeg"
                   alt="ROTMAN delicious street food"
                   fill
                   priority
-                  className="object-cover rounded-3xl"
+                  className="lg:object-fit object-cover rounded-3xl"
                 />
               </motion.div>
 

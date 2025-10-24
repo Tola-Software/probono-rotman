@@ -1,92 +1,105 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { Instagram, Facebook, Twitter, Mail } from "lucide-react";
+import Image from "next/image";
+import { Instagram, Facebook, MessageCircle } from "lucide-react";
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    // Client-side only - just show success message
-    alert("Thanks for subscribing! (This is a demo)");
-    setEmail("");
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <footer className="bg-surface border-t border-surface-light">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Brand with Logo */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold text-accent">ROTMAN</div>
+            <Image src="/images/rotman-logo.png" alt="ROTMAN Logo" width={150} height={60} className="h-14 w-auto" />
             <p className="text-text-muted leading-relaxed">
-              Bold flavors, late nights. Made-to-order street food with love and passion.
+              Roti Bakar & Terang Bulan terbaik di Bali. Cita rasa autentik yang nagih!
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-text-muted hover:text-accent transition-colors" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/rotibakarrotman/"
+                className="text-text-muted hover:text-accent transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-text-muted hover:text-accent transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-text-muted hover:text-accent transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
+              <a
+                href="https://wa.me/6281337037980"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-muted hover:text-accent transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-text-primary">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-text-primary">Navigasi</h3>
             <nav className="space-y-2">
-              <Link href="/" className="block text-text-muted hover:text-accent transition-colors">
+              <a
+                href="#home"
+                onClick={(e) => handleSmoothScroll(e, "#home")}
+                className="block text-text-muted hover:text-accent transition-colors cursor-pointer"
+              >
                 Home
-              </Link>
-              <Link href="/menu" className="block text-text-muted hover:text-accent transition-colors">
+              </a>
+              <a
+                href="#menu"
+                onClick={(e) => handleSmoothScroll(e, "#menu")}
+                className="block text-text-muted hover:text-accent transition-colors cursor-pointer"
+              >
                 Menu
-              </Link>
-              <Link href="/about" className="block text-text-muted hover:text-accent transition-colors">
+              </a>
+              <a
+                href="#about"
+                onClick={(e) => handleSmoothScroll(e, "#about")}
+                className="block text-text-muted hover:text-accent transition-colors cursor-pointer"
+              >
                 About
-              </Link>
-              <Link href="/contact" className="block text-text-muted hover:text-accent transition-colors">
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => handleSmoothScroll(e, "#contact")}
+                className="block text-text-muted hover:text-accent transition-colors cursor-pointer"
+              >
                 Contact
-              </Link>
+              </a>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-text-primary">Contact</h3>
-            <div className="space-y-2 text-text-muted">
-              <p>Jl. Sunset Road 88, Kuta</p>
-              <p>+62 812-3456-7890</p>
-              <p>hello@rotman.id</p>
-              <p className="text-sm">Mon-Sun: 6:00 PM - 12:30 AM</p>
+            <h3 className="text-lg font-semibold text-text-primary">Kontak</h3>
+            <div className="space-y-2 text-text-muted text-sm">
+              <p>
+                <strong>Alamat:</strong> Jl. Karang Sari No.4 Padangsambian kaja, Bali
+              </p>
+              <p>
+                <strong>WhatsApp:</strong>{" "}
+                <a href="https://wa.me/6281337037980" className="hover:text-accent transition-colors">
+                  +62 813-370-379-80
+                </a>
+              </p>
+              <p>
+                <strong>Email:</strong>{" "}
+                <a href="mailto:hello@rotman.id" className="hover:text-accent transition-colors">
+                  hello@rotman.id
+                </a>
+              </p>
+              <p>
+                <strong>Jam:</strong> Setiap hari 16:00 - 23:30
+              </p>
             </div>
-          </div>
-
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-text-primary">Stay Updated</h3>
-            <p className="text-text-muted text-sm">Get notified about new items and special offers.</p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
-                className="w-full px-3 py-2 bg-background border border-surface-light rounded-lg text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg transition-colors font-medium"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
 

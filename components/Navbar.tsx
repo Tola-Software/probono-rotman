@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +19,20 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/menu", label: "Menu" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "#home", label: "Home" },
+    { href: "#menu", label: "Menu" },
+    { href: "#about", label: "About" },
+    { href: "#contact", label: "Contact" },
   ];
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const whatsappUrl =
     "https://wa.me/6281337037980?text=Hi%20ROTMAN!%20I%20want%20to%20order%3A%20%5Bitem%20names%5D%20%2D%20pickup%2Fdelivery%3F";
@@ -51,20 +60,25 @@ export function Navbar() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
+            <a
+              href="#home"
+              onClick={(e) => handleScroll(e, "#home")}
+              className="flex items-center space-x-2 cursor-pointer"
+            >
               <Image src="/images/rotman-logo.png" alt="rotman-logo" width={200} height={80} className="h-12 w-auto" />
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
-                  className="text-text-primary hover:text-accent transition-colors duration-200 font-medium"
+                  onClick={(e) => handleScroll(e, link.href)}
+                  className="text-text-primary hover:text-accent transition-colors duration-200 font-medium cursor-pointer"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </div>
 
@@ -98,14 +112,14 @@ export function Navbar() {
           >
             <div className="py-4 space-y-4 border-t border-surface-light">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-text-primary hover:text-accent transition-colors duration-200 font-medium"
+                  onClick={(e) => handleScroll(e, link.href)}
+                  className="block text-text-primary hover:text-accent transition-colors duration-200 font-medium cursor-pointer"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <a
                 href={whatsappUrl}
