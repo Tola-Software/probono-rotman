@@ -35,7 +35,7 @@ export default function ContactPage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">Get in Touch</h1>
           <p className="text-lg text-text-muted max-w-2xl mx-auto">
-            Have questions? Want to place an order? We'd love to hear from you.
+            Have questions? Want to place an order? We&apos;d love to hear from you.
           </p>
         </motion.div>
 

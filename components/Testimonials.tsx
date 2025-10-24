@@ -87,7 +87,7 @@ export function Testimonials() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">What Our Customers Say</h2>
           <p className="text-lg text-text-muted max-w-2xl mx-auto">
-            Real reviews from real food lovers who've experienced our street food magic.
+            Real reviews from real food lovers who&apos;ve experienced our street food magic.
           </p>
         </motion.div>
 
@@ -120,7 +120,7 @@ export function Testimonials() {
 
                   {/* Comment */}
                   <blockquote className="text-lg md:text-xl text-text-primary leading-relaxed mb-6 italic">
-                    "{testimonials[currentIndex].comment}"
+                    &quot;{testimonials[currentIndex].comment}&quot;
                   </blockquote>
 
                   {/* Author */}

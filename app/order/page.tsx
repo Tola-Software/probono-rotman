@@ -224,7 +224,7 @@ Phone: [Your Phone]`;
           </motion.button>
 
           <p className="text-center text-text-muted text-sm mt-4">
-            You'll be redirected to WhatsApp to confirm your order
+            You&apos;ll be redirected to WhatsApp to confirm your order
           </p>
         </div>
       </div>
