@@ -103,8 +103,42 @@ export function Footer() {
           </div>
         </div>
 
+        {/* TOLA Software Credit Section - Prominent Placement */}
+        <div className="mt-12 pt-8 border-t border-surface-light">
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex items-center space-x-3 bg-gradient-to-r from-accent/10 via-secondary/10 to-accent/10 px-6 py-3 rounded-full border border-accent/20">
+              <span className="text-text-muted text-sm">Made with</span>
+              <span className="text-red-500 text-lg animate-pulse">❤️</span>
+              <span className="text-text-muted text-sm">by</span>
+            </div>
+            <a
+              href="https://www.tola.solutions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center space-y-2 hover:scale-105 transition-all duration-300"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-accent/20 blur-xl rounded-full group-hover:bg-accent/30 transition-all duration-300" />
+                <Image
+                  src="/images/tola-logo-white.png"
+                  alt="TOLA Software"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto relative z-10 group-hover:brightness-110 transition-all duration-300"
+                />
+              </div>
+              <span className="text-xs text-text-muted group-hover:text-accent transition-colors">
+                Click to visit TOLA Software
+              </span>
+            </a>
+            <p className="text-center text-xs text-text-muted max-w-md">
+              Professional web development services for your business
+            </p>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-surface-light text-center">
+        <div className="mt-8 pt-6 border-t border-surface-light/50 text-center">
           <p className="text-text-muted text-sm">© {new Date().getFullYear()} ROTMAN. All rights reserved.</p>
         </div>
       </div>
