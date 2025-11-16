@@ -92,8 +92,8 @@ export function Footer() {
               </p>
               <p>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:hello@rotman.id" className="hover:text-accent transition-colors">
-                  hello@rotman.id
+                <a href="mailto:hello@rotmanrotibakar.com" className="hover:text-accent transition-colors">
+                  hello@rotmanrotibakar.com
                 </a>
               </p>
               <p>

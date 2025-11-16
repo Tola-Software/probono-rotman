@@ -12,7 +12,7 @@ export function HoursLocation() {
   const locationName = "Roti Bakar & Terang Bulan ROTMAN";
   const address = "Jl. Karang Sari No.4 Padangsambian kaja, Denpasar, Bali";
   const phone = "+62 813-3703-7980";
-  const email = "hello@rotman.id";
+  const email = "hello@rotmanrotibakar.com";
 
   // Google Maps embed URL
   const mapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2289!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2390018ca6743%3A0x8e7b07a74afbafd2!2sRoti%20bakar%20%26%20terang%20bulan%20rotman!5e0!3m2!1sid!2sid!4v1634650000000`;

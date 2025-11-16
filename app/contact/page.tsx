@@ -113,8 +113,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-text-primary mb-1">Email</h3>
-                    <a href="mailto:hello@rotman.id" className="text-text-muted hover:text-accent transition-colors">
-                      hello@rotman.id
+                    <a
+                      href="mailto:hello@rotmanrotibakar.com"
+                      className="text-text-muted hover:text-accent transition-colors"
+                    >
+                      hello@rotmanrotibakar.com
                     </a>
                   </div>
                 </div>

@@ -17,13 +17,13 @@ export function MenuSection() {
     },
     {
       name: "ShopeeFood",
-      url: "https://shopeefood.co.id",
+      url: "https://shopee.co.id/universal-link/now-food/shop/21446797?deep_and_deferred=1&shareChannel=whatsapp",
       color: "bg-orange-500 hover:bg-orange-600",
       imageSrc: "/images/shopee.png",
     },
     {
       name: "GrabFood",
-      url: "https://grabfood.com",
+      url: "https://food.grab.com/id/en/restaurant/roti-bakar-rotman-padangsambian-kaja-delivery/6-C6ACEP5JLFN1CA?sourceID=20251116_125222_93fee4ba9e4c4bd0b6c11f52286d0e28_MEXMPS&nameSlug=online-delivery&id=6-C6ACEP5JLFN1CA",
       color: "bg-green-500 hover:bg-green-900",
       imageSrc: "/images/grab.png",
     },

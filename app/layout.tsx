@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rotmanrotibakar.com"),
   title: "ROTMAN - Roti Bakar & Terang Bulan | Paling Nagih di Bali",
   description:
     "Roti Bakar & Terang Bulan spesial dari ROTMAN. Dibuat fresh dengan resep tradisional, tekstur renyah luar lembut dalam. Buka setiap hari 16:00-23:30 di Jl. Karang Sari No.4 Padangsambian kaja, Denpasar, Bali.",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ROTMAN - Roti Bakar & Terang Bulan | Paling Nagih di Bali",
     description: "Roti Bakar & Terang Bulan dengan cita rasa autentik yang nagih dan lezat.",
-    url: "https://rotman.id",
+    url: "https://rotmanrotibakar.com",
     siteName: "ROTMAN",
     images: [
       {
@@ -54,7 +55,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "ROTMAN",
   description: "Roti Bakar & Terang Bulan spesial dari ROTMAN dengan cita rasa autentik yang nagih.",
-  url: "https://rotman.id",
+  url: "https://rotmanrotibakar.com",
   telephone: "+62-813-3703-7980",
   servesCuisine: "Indonesian",
   hasMenu: true,
