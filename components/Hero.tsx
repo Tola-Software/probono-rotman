@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { MessageCircle, ArrowDown } from "lucide-react";
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -45,7 +45,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium"
+                className="flex justify-center lg:justify-start px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium"
               >
                 {/* 🔥 Now Open in Kuta */}
                 <Image
@@ -98,7 +98,7 @@ export function Hero() {
                 className="inline-flex items-center justify-center space-x-3 bg-surface hover:bg-surface-light border border-surface-light text-text-primary px-8 py-4 rounded-xl transition-all duration-300 font-bold text-lg hover:scale-105 cursor-pointer"
               >
                 <span>View Menu</span>
-                <ArrowRight size={20} />
+                <ArrowDown size={20} />
               </a>
             </motion.div>
 

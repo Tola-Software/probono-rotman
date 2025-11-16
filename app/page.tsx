@@ -16,7 +16,6 @@ export default function HomePage() {
       <section id="about">
         <WhyUs />
       </section>
-
       <section id="hours">
         <HoursLocation />
       </section>

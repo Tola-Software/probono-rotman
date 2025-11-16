@@ -44,7 +44,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-text-primary">Navigasi</h3>
+            <h3 className="text-lg font-semibold text-text-primary"></h3>
             <nav className="space-y-2">
               <a
                 href="#home"
