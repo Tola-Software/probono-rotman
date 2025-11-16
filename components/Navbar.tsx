@@ -34,6 +34,18 @@ export function Navbar() {
     }
   };
 
+  const handleOrderNowClick = () => {
+    // Push GTM event
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "button_click",
+        button_name: "order now navbar",
+        button_location: "navbar",
+        button_action: "order_whatsapp",
+      });
+    }
+  };
+
   const whatsappUrl =
     "https://wa.me/6281337037980?text=Hi%20ROTMAN!%20I%20want%20to%20order%3A%20%5Bitem%20names%5D%20%2D%20pickup%2Fdelivery%3F";
 
@@ -88,10 +100,11 @@ export function Navbar() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleOrderNowClick}
                 className="hidden sm:flex items-center space-x-2 bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium"
               >
                 <MessageCircle size={18} />
-                <span>Order Now</span>
+                <span></span>
               </a>
 
               {/* Mobile menu button */}
@@ -125,6 +138,7 @@ export function Navbar() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleOrderNowClick}
                 className="flex items-center space-x-2 bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium w-fit"
               >
                 <MessageCircle size={18} />

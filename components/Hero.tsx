@@ -19,6 +19,18 @@ export function Hero() {
     }
   };
 
+  const handleOrderNowClick = () => {
+    // Push GTM event
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "button_click",
+        button_name: "button order now hero section",
+        button_location: "hero",
+        button_action: "order_whatsapp",
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background to-background/80">
       {/* Background Pattern */}
@@ -86,6 +98,7 @@ export function Hero() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleOrderNowClick}
                 className="inline-flex items-center justify-center space-x-3 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <MessageCircle size={24} />
