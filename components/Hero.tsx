@@ -99,6 +99,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleOrderNowClick}
+                id="ordernow-hero-btn"
                 className="inline-flex items-center justify-center space-x-3 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <MessageCircle size={24} />
